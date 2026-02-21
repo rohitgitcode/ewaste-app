@@ -8,7 +8,6 @@ const Marketplace = () => {
   const [marketplaceData, setMarketplaceData] = useState(null);
   const [userCredits, setUserCredits] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [redeeming, setRedeeming] = useState(false);
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState('');
 

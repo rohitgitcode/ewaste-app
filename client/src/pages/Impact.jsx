@@ -5,7 +5,6 @@ import '../styles/Impact.css';
 
 const Impact = () => {
   const { t } = useLanguage();
-  const [impactData, setImpactData] = useState(null);
   const [impactStats, setImpactStats] = useState(null);
   const [leaderboard, setLeaderboard] = useState([]);
   const [loading, setLoading] = useState(true);
