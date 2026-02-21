@@ -14,10 +14,12 @@ const impactRoutes = require('./routes/impact');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Try to connect to database, but continue even if it fails
-connectDB().catch(err => {
-  console.log('Database connection failed, running with mock data:', err.message);
-});
+// Temporarily disable database connection for production testing
+// connectDB().catch(err => {
+//   console.log('Database connection failed, running with mock data:', err.message);
+// });
+
+console.log('Running in mock data mode - database connection disabled');
 
 const uploadsDir = path.join(__dirname, '../uploads');
 if (!fs.existsSync(uploadsDir)) {
