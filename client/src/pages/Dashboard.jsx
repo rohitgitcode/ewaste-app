@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
+import { API_ENDPOINTS } from '../config/api';
 import '../styles/Dashboard.css';
 
 const Dashboard = () => {
   const { t } = useLanguage();
   const [userData, setUserData] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [leaderboard, setLeaderboard] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchUserData();
@@ -16,7 +17,7 @@ const Dashboard = () => {
 
   const fetchUserData = async () => {
     try {
-      const response = await fetch('/api/credits/user/demo-user');
+      const response = await fetch(API_ENDPOINTS.USER_CREDITS);
       const data = await response.json();
       
       if (data.success) {
@@ -31,7 +32,7 @@ const Dashboard = () => {
 
   const fetchLeaderboard = async () => {
     try {
-      const response = await fetch('/api/credits/leaderboard');
+      const response = await fetch(API_ENDPOINTS.LEADERBOARD);
       const data = await response.json();
       
       if (data.success) {

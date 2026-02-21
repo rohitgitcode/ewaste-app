@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
+import { API_ENDPOINTS } from '../config/api';
 import '../styles/Marketplace.css';
 
 const Marketplace = () => {
   const { t } = useLanguage();
   const [marketplaceData, setMarketplaceData] = useState(null);
+  const [userCredits, setUserCredits] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [userCredits, setUserCredits] = useState({ ecoCredits: 0, carbonCredits: 0 });
+  const [redeeming, setRedeeming] = useState(false);
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState('');
 
@@ -17,7 +19,7 @@ const Marketplace = () => {
 
   const fetchMarketplaceData = async () => {
     try {
-      const response = await fetch('/api/marketplace');
+      const response = await fetch(API_ENDPOINTS.MARKETPLACE);
       const data = await response.json();
       
       if (data.success) {
@@ -32,7 +34,7 @@ const Marketplace = () => {
 
   const fetchUserCredits = async () => {
     try {
-      const response = await fetch('/api/credits/user/demo-user');
+      const response = await fetch(API_ENDPOINTS.USER_CREDITS);
       const data = await response.json();
       
       if (data.success) {
@@ -51,7 +53,7 @@ const Marketplace = () => {
     setMessageType('');
 
     try {
-      const response = await fetch('/api/marketplace/redeem', {
+      const response = await fetch(API_ENDPOINTS.MARKETPLACE_REDEEM, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

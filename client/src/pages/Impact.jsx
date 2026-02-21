@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
+import { API_ENDPOINTS } from '../config/api';
 import '../styles/Impact.css';
 
 const Impact = () => {
   const { t } = useLanguage();
+  const [impactData, setImpactData] = useState(null);
   const [impactStats, setImpactStats] = useState(null);
   const [leaderboard, setLeaderboard] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,8 +17,8 @@ const Impact = () => {
   const fetchImpactData = async () => {
     try {
       const [statsResponse, leaderboardResponse] = await Promise.all([
-        fetch('/api/impact/stats'),
-        fetch('/api/impact/leaderboard')
+        fetch(API_ENDPOINTS.IMPACT_STATS),
+        fetch(API_ENDPOINTS.IMPACT_LEADERBOARD)
       ]);
 
       const statsData = await statsResponse.json();

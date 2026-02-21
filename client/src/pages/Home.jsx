@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
+import { API_ENDPOINTS } from '../config/api';
 import '../styles/Home.css';
 
 const Home = () => {
@@ -19,7 +20,7 @@ const Home = () => {
 
   const fetchStats = async () => {
     try {
-      const response = await fetch('/api/impact/stats');
+      const response = await fetch(API_ENDPOINTS.IMPACT_STATS);
       const data = await response.json();
       
       if (data.success) {

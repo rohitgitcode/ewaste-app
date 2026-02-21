@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
+import { API_ENDPOINTS } from '../config/api';
 import '../styles/Deposit.css';
 
 const Deposit = () => {
@@ -163,7 +164,7 @@ const Deposit = () => {
         formDataToSend.append('deviceImage', imageFile);
       }
 
-      const response = await fetch('/api/deposit', {
+      const response = await fetch(API_ENDPOINTS.DEPOSIT, {
         method: 'POST',
         body: formDataToSend
       });

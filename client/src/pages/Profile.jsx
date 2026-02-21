@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
 import { useTheme } from '../contexts/ThemeContext.jsx';
+import { API_ENDPOINTS } from '../config/api';
 import '../styles/Profile.css';
 
 const Profile = () => {
@@ -22,7 +23,7 @@ const Profile = () => {
 
   const fetchUserData = async () => {
     try {
-      const response = await fetch('/api/credits/user/demo-user');
+      const response = await fetch(API_ENDPOINTS.USER_CREDITS);
       const data = await response.json();
       
       if (data.success) {
