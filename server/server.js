@@ -24,7 +24,12 @@ if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir);
 }
 
-app.use(cors());
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' 
+    ? true  // Allow all origins in production for now
+    : ['http://localhost:3000'],
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -51,6 +56,15 @@ app.get('/api/placeholder/:width/:height', (req, res) => {
   `;
   res.setHeader('Content-Type', 'image/svg+xml');
   res.send(svg.trim());
+});
+
+// Add root route for testing
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'E-Waste Recycling API is running!',
+    status: 'healthy'
+  });
 });
 
 app.use((err, req, res, next) => {
