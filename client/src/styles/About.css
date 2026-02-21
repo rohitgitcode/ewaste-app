@@ -1,0 +1,605 @@
+.about {
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.about-header p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mission-section,
+.blockchain-section,
+.carbon-credits-section,
+.process-section,
+.contact-section {
+  margin-bottom: 80px;
+}
+
+.mission-section h2,
+.blockchain-section h2,
+.carbon-credits-section h2,
+.process-section h2,
+.contact-section h2 {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mission-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.mission-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+.mission-text p {
+  margin-bottom: 24px;
+}
+
+.mission-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.stat {
+  text-align: center;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.05), rgba(46, 125, 50, 0.1));
+  border-radius: 12px;
+  border: 2px solid rgba(46, 125, 50, 0.1);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.mission-image {
+  display: flex;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.image-placeholder span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+}
+
+.placeholder-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+
+.blockchain-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.blockchain-features {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.feature {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  min-width: 60px;
+  text-align: center;
+}
+
+.feature h3 {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.feature p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.blockchain-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.blockchain-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.block {
+  background: var(--bg-white);
+  border: 2px solid var(--primary-green);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  min-width: 200px;
+  box-shadow: var(--shadow);
+}
+
+.block-hash {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: var(--primary-green);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.block-data {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.credits-explanation {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--border-color);
+}
+
+.credits-types {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.credit-type {
+  padding: 32px;
+  border-radius: 12px;
+  border: 2px solid var(--border-color);
+}
+
+.credit-type.eco {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.05), rgba(76, 175, 80, 0.1));
+  border-color: rgba(76, 175, 80, 0.2);
+}
+
+.credit-type.carbon {
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.05), rgba(33, 150, 243, 0.1));
+  border-color: rgba(33, 150, 243, 0.2);
+}
+
+.credit-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.credit-header h3 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin: 0;
+  font-weight: 600;
+}
+
+.credit-icon {
+  font-size: 2rem;
+}
+
+.credit-details p {
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.credit-example {
+  background: var(--bg-light);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.credit-uses h4 {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.credit-uses ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.credit-uses li {
+  padding: 8px 0;
+  color: var(--text-dark);
+  position: relative;
+  padding-left: 20px;
+}
+
+.credit-uses li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 20px;
+}
+
+.step-content h3 {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.step-content p {
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-icon {
+  font-size: 2rem;
+  min-width: 50px;
+  text-align: center;
+}
+
+.contact-details h3 {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.contact-details p {
+  color: var(--text-light);
+  margin: 0;
+}
+
+.contact-form {
+  background: var(--bg-white);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--border-color);
+}
+
+.contact-form h3 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-green);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 20px 0;
+  }
+  
+  .about-header h1 {
+    font-size: 2rem;
+  }
+  
+  .mission-content,
+  .blockchain-content,
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .mission-stats {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .credits-types {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .credit-type {
+    padding: 24px;
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .credits-explanation {
+    padding: 24px;
+  }
+  
+  .contact-form {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .mission-text {
+    font-size: 1rem;
+  }
+  
+  .image-placeholder {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .placeholder-icon {
+    font-size: 3rem;
+  }
+  
+  .feature {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .blockchain-demo {
+    transform: scale(0.9);
+  }
+  
+  .credit-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+body.dark-mode .about-header h1 {
+  color: var(--text-dark);
+}
+
+body.dark-mode .mission-section h2,
+body.dark-mode .blockchain-section h2,
+body.dark-mode .carbon-credits-section h2,
+body.dark-mode .process-section h2,
+body.dark-mode .contact-section h2 {
+  color: var(--text-dark);
+}
+
+body.dark-mode .mission-text {
+  color: var(--text-dark);
+}
+
+body.dark-mode .stat {
+  background: linear-gradient(135deg, rgba(102, 187, 106, 0.1), rgba(102, 187, 106, 0.2));
+  border-color: rgba(102, 187, 106, 0.3);
+}
+
+body.dark-mode .block {
+  background: #1e1e1e;
+  border-color: var(--accent-green);
+}
+
+body.dark-mode .block-data {
+  color: var(--text-dark);
+}
+
+body.dark-mode .credits-explanation {
+  background: #1e1e1e;
+  border-color: rgba(102, 187, 106, 0.2);
+}
+
+body.dark-mode .credit-type {
+  border-color: rgba(102, 187, 106, 0.3);
+}
+
+body.dark-mode .credit-type.eco {
+  background: linear-gradient(135deg, rgba(102, 187, 106, 0.1), rgba(102, 187, 106, 0.2));
+}
+
+body.dark-mode .credit-type.carbon {
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(33, 150, 243, 0.2));
+}
+
+body.dark-mode .credit-header h3 {
+  color: var(--text-dark);
+}
+
+body.dark-mode .credit-details p {
+  color: var(--text-dark);
+}
+
+body.dark-mode .credit-example {
+  background: #121212;
+}
+
+body.dark-mode .credit-uses h4 {
+  color: var(--text-dark);
+}
+
+body.dark-mode .credit-uses li {
+  color: var(--text-dark);
+}
+
+body.dark-mode .step-content h3 {
+  color: var(--text-dark);
+}
+
+body.dark-mode .contact-details h3 {
+  color: var(--text-dark);
+}
+
+body.dark-mode .contact-form {
+  background: #1e1e1e;
+  border-color: rgba(102, 187, 106, 0.2);
+}
+
+body.dark-mode .contact-form label {
+  color: var(--text-dark);
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background: #121212;
+  border-color: rgba(102, 187, 106, 0.2);
+  color: var(--text-dark);
+}
+
+body.dark-mode .contact-form input:focus,
+body.dark-mode .contact-form textarea:focus {
+  border-color: var(--accent-green);
+}
+
+body.dark-mode .contact-form h3 {
+  color: var(--text-dark);
+}

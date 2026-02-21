@@ -1,0 +1,15 @@
+# Ignore node_modules (dependencies)
+node_modules/
+
+# Ignore environment variables
+.env
+
+# Ignore build output (React production build)
+build/
+
+# Ignore logs
+*.log
+
+# Ignore OS/system files
+.DS_Store
+Thumbs.db
