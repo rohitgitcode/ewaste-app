@@ -28,7 +28,7 @@ if (!fs.existsSync(uploadsDir)) {
 
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? true  // Allow all origins in production for now
+    ? ['https://ewaste-app-three.vercel.app', 'https://ewaste-app-three.vercel.app/']  // Your Vercel frontend
     : ['http://localhost:3000'],
   credentials: true
 }));
